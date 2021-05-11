@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Abilities.h
+stdio.h
+-
+stdlib.h
+-
+Defines.h
+../include/Defines.h
+Vector.h
+../include/Vector.h
+
+../include/Battle.h
+Ship.h
+../include/Ship.h
+
+../include/Defines.h
+
+../include/Ship.h
+Abilities.h
+../include/Abilities.h
+
+../include/Vector.h
+stddef.h
+-
+stdbool.h
+-
+
+/home/dimitarangelov/Desktop/C/StarCraft-VI/src/Battle.c
+Battle.h
+/home/dimitarangelov/Desktop/C/StarCraft-VI/src/Battle.h
+

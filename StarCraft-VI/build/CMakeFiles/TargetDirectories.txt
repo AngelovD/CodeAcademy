@@ -1,0 +1,3 @@
+/home/dimitarangelov/Desktop/C/StarCraft-VI/build/CMakeFiles/rebuild_cache.dir
+/home/dimitarangelov/Desktop/C/StarCraft-VI/build/CMakeFiles/edit_cache.dir
+/home/dimitarangelov/Desktop/C/StarCraft-VI/build/CMakeFiles/starcraft.dir
