@@ -2,7 +2,7 @@
 #include "tryFunc.h"
 #include "barcodeFunc.h"
 
-static unsigned char compareArr[] = {1,17,9,25,5,20,12,3,18,16,4,6};
+static unsigned char compareArr[] = {1,17,9,25,5,20,12,3,18,16,4};
 
 int scanSequence(t_barcode *barcode){
     scanf("%d",&barcode->size);
@@ -118,11 +118,17 @@ int checkCode(t_barcode *barcode){
     for(i=0;i<barcode->size;i++){
         int j=0;
         int temp=0;
-        for(j=0;j<12;j++){
+        char breakFlag=1;
+        for(j=0;j<11;j++){
             if(barcode->barcode[i]==compareArr[j]){
                 temp=j;
+                breakFlag=0;
                 break;
             }
+        }
+        if(breakFlag){
+            printf("\nUnknown symbol in barcode\n.");
+            return Unknown_symbol;
         }
         code[i]=temp;
     }

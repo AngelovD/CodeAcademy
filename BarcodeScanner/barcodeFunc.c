@@ -49,19 +49,22 @@ int cutEdges(t_barcode *barcode){
     }
     breakFlag=1;
     i+=5;
-    int j=i;
-    for(;i<barcode->size;i++){
-        if(isEdge(barcode,i)){
+    int j=barcode->size-5;
+    for(;j>i;j--){
+        if(isEdge(barcode,j)){
             breakFlag=0;
             break;
         }
-        barcode->barcode[i-j]=barcode->barcode[i];
     }
     if(breakFlag){
         printf("\nBarcode truncated. Move scanner\n");
         return Barcode_no_edge_sequence;
     }
-    barcode->size=i-j;
+    int z=0;
+    barcode->size=j-i;
+    for(;i<=j;i++,z++){
+        barcode->barcode[z]=barcode->barcode[i];
+    }
     barcode->barcode = realloc(barcode->barcode,barcode->size);
     if(!barcode->barcode){
         return Memory_allocation_error;

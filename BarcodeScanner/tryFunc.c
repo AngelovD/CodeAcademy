@@ -2,7 +2,7 @@
 #include <time.h>
 
 static FILE *logfile;
-static char *statusArr[]={"Success.","Failure.","Memory allocation error.","File error.","Barcode too short.","Barcode no edge sequence.","Wrong C.","Wrong K."};
+static char *statusArr[]={"Success.","Failure.","Memory allocation error.","File error.","Barcode too short.","Barcode no edge sequence.","Wrong C.","Wrong K.","Unknown symbol in barcode"};
 
 
 
